@@ -1,0 +1,12 @@
+import mysql.connector
+conn=mysql.connector.connect(user='root', password='admin', host='localhost', database='questionbank')
+mycursor=conn.cursor()
+#mycursor.execute("CREATE DATABASE QUESTIONBANK")
+mycursor.execute("create table questions(id int primary key, subject varchar(40), questions varchar(200), doc datetime, faculty varchar(40));")
+#mycursor.execute("DROP TABLE EOLE")
+#mycursor.execute("insert into employees(id,name,dob,email)values(29,'salehin','1995-10-09','salehin@gmail.com');")
+#conn.commit()
+mycursor.execute("SHOW TABLES")
+print(mycursor.fetchall())
+#mycursor.execute("SELECT * FROM employees;")
+#print(mycursor.fetchall())
