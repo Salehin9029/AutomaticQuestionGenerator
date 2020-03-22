@@ -21,7 +21,7 @@ mysql = MySQL(app)
 
 @app.route('/')
 def index():
-    # return render_template('show.html')
+    return render_template('index.html')
     
     # count = cur.execute("SELECT MAX(id) FROM questions")
     # count = cur.fetchone()
@@ -31,7 +31,7 @@ def index():
 
 @app.route('/generate')
 def generate():
-    # return render_template('show.html')
+    # return render_template('generate.html')
     
     # count = cur.execute("SELECT MAX(id) FROM questions")
     # count = cur.fetchone()
@@ -41,7 +41,7 @@ def generate():
 
 @app.route('/about')
 def about():
-    # return render_template('show.html')
+    # return render_template('about.html')
     
     # count = cur.execute("SELECT MAX(id) FROM questions")
     # count = cur.fetchone()
