@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block head%}
+
+<h1>Generate and store questions</h1>
+{%endblock%}
+
+{% block body%}
+
+<form action="/generate" method="POST">
+    <input type="text" name="subject" placeholder="subject" id="subject">
+    <input type="text" name="name" placeholder="Faculty Name" id="name">
+    <input type="text" name="mail" placeholder="Email" id="mail">
+    <input type="submit" value="Genearate">
+</form>
+
+
+{%endblock%}
+
