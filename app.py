@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for, request
+from flask import Flask, render_template, url_for, request, redirect
 
 from flask_mysqldb import MySQL
 import mysql.connector
@@ -7,6 +7,7 @@ import datetime
 # import yaml
 
 app = Flask(__name__)
+
 #Configuring DB
 # db = yaml.load(open('db.yaml'), Loader=yaml.FullLoader )
 app.config['MYSQL_HOST'] = 'localhost'
@@ -69,13 +70,14 @@ def generate():
 
                 print(count, line.strip())
                 count=count+1
+
                 
         except Exception as e:
-            print("Fucking Error" + e)
+            print("This is the Error" + e)
             return e
         return render_template('generate.html');
     else:
-         return redirect('generate.html') 
+         return render_template('generate.html') 
    
 @app.route('/about')
 def about():
