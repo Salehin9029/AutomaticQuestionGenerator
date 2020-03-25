@@ -1,4 +1,5 @@
 from flask import Flask, render_template, url_for, request, redirect
+from flask_table import Table, Col
 
 from flask_mysqldb import MySQL
 import mysql.connector
@@ -40,7 +41,7 @@ def generate():
     cur = mysql.connection.cursor()
     if request.method == 'POST':
         try:
-            name = request.form['name']
+        
             mail = request.form['mail']
             subject = request.form['subject']
             file1 = open('output.txt', 'r', encoding="utf8") 
@@ -89,9 +90,22 @@ def about():
     
     return 'str(results)' #the str is used for integer values
 
+@app.route('/input')
+def input():
+    # return render_template('about.html')
+    
+    # count = cur.execute("SELECT MAX(id) FROM questions")
+    # count = cur.fetchone()
+    # count = functools.reduce(lambda sub, ele: sub * 10 + ele, count)
+    
+    return 'str(results)' #the str is used for integer values
+
 
 @app.route('/show')
 def show():
+
+
+    
     # return render_template('show.html')
     cur = mysql.connection.cursor()
     # count = cur.execute("SELECT MAX(id) FROM questions")
@@ -99,11 +113,11 @@ def show():
     # count = functools.reduce(lambda sub, ele: sub * 10 + ele, count)
     cur.execute('''SELECT * FROM questions''')
     results = cur.fetchall()
-    
+    cur.close()
     print (results) #prints in console
                     #return results
     
-    return str(results) #the str is used for integer values
+    return render_template('show.html', output = results) #the str is used for integer values
         
        
 

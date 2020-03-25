@@ -2,18 +2,31 @@
 
 {% block head%}
 
-<h1>Generate and store questions</h1>
 {%endblock%}
 
 {% block body%}
+<div class="topnav">
+    <a class="active" href="#home">Home</a>
+    <a href="show">Show</a>
+    <a href="input">Input Passage</a>
+    <a href="generate">Generate Passage</a>
+  </div>
 
+<div class="container">
 <form action="/generate" method="POST">
+    <div class="col-75">
     <input type="text" name="subject" placeholder="subject" id="subject">
-    <input type="text" name="name" placeholder="Faculty Name" id="name">
-    <input type="text" name="mail" placeholder="Email" id="mail">
-    <input type="submit" value="Genearate">
-</form>
+    </div>
 
+    <div class="col-75">
+    <input type="text" name="mail" placeholder="Email" id="mail">
+    </div>
+    <div class="row">
+        <input type="submit" value="Generate">
+      </div>
+
+</form>
+</div>
 
 {%endblock%}
 

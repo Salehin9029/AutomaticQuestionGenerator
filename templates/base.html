@@ -6,7 +6,17 @@
 {% block head%}{% endblock %}
 </head>
 <body>
-    {% block body%}{% endblock %}
+    {% block body%}
+    
+    <aside>
+        <ul>
+        <li><div class="icons"><i class="fa fa-heart"></div></i><div class="linktitle">Favorite</div></li>
+        <li><div class="icons"><i class="fa fa-align-justify"></i></div><div class="linktitle">Channels</div></li>
+        <li><div class="icons"><i class="fa fa-group"></i></div><div class="linktitle">My Group</div></li>
+        <li><div class="icons"><i class="fa fa-user"></i></div><div class="linktitle">My Profile</div></li>
+        </ul>
+        </aside>
+    {% endblock %}
 
 
 </body>

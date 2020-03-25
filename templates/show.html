@@ -1,19 +1,45 @@
-<table>
+{% extends 'base.html' %}
+{% block body%}
+<div class="topnav">
+    <a class="active" href="#home">Home</a>
+    <a href="show">Show</a>
+    <a href="input">Input Passage</a>
+    <a href="generate">Generate Passage</a>
+  </div>
+    
+
+<table class="container">
+    
+    
     <tr>
-        <th>
-            ID
-        </th>
-        <th>
-            Subject Name
-        </th>
-        <th>
-            Questions
-        </th>
-        <th>
-            Date of Creation
-        </th>
-        <th>
-            Mail
-        </th>
+        <td>ID</td>
+        <td>SUBJECT NAME & SEMESTER NAME</td>
+        <td>QUESTIONS</td>
+        <td>DATE OF CREATION</td>
+        <td>EMAIL</td>
     </tr>
+    {% for row in output%}
+    <tr>
+        <td>
+            {{row.0}}
+        </td>
+        <td>
+            
+            {{row.1}}
+        </td>
+        <td>
+            
+            {{row.2}}
+        </td>
+        <td>
+            
+            {{row.3}}
+        </td>
+        <td>
+            
+            {{row.4}}
+        </td>
+    </tr>
+    {% endfor %}
 </table>
+{%endblock%}
