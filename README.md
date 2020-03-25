@@ -2,8 +2,8 @@
  Automatic Question Generator based on NLP and flask for frontend
 
 
-Install
-- flask 
+
+-flask 
 -mysqldb 
 -flask_table 
 -mysql.connector 
