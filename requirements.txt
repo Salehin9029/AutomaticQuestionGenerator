@@ -1,0 +1,5 @@
+Flask
+Python 3.5+
+NLTK
+NumPy
+Textblob
