@@ -1,6 +1,6 @@
 @echo off
 
-set "VIRTUAL_ENV=C:\Users\saleh\OneDrive\Desktop\AutomaticQuestionGenerator\env"
+set "VIRTUAL_ENV=G:\Github\AutomaticQuestionGenerator\env"
 
 if defined _OLD_VIRTUAL_PROMPT (
     set "PROMPT=%_OLD_VIRTUAL_PROMPT%"
